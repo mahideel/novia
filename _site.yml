@@ -1,0 +1,14 @@
+name: "novia"
+title: "My Website"
+description: |
+  My Website
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Content"
+      href: content.html
+output: distill::distill_article
