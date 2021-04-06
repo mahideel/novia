@@ -1,0 +1,20 @@
+---
+title: "Variable selection in Metabolomic"
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+Variable selection method commonly used in metabolomics
+
+- What are the available methods out there? 
+- Bayesian vs. Frequentist selection method
+
+  - pros and cons of each
+  - any gap to fill?
+  - what is the most approproate one for metabolites selection? 
+    
+    - NOTE: our metabolites are highly correlated with one another, so whichever method I end up selecting must be able to handle multi-collinearity well and able to impose sparsity to reduce the high-dimensionality. 

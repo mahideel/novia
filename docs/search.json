@@ -5,8 +5,29 @@
       "title": "About this site",
       "description": "Some additional details about the website",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-04-06T09:53:09+08:00"
+      "contents": "\nThis site is my online repository of my thesis to be.\n\n\n\n",
+      "last_modified": "2021-04-06T11:11:21+08:00"
+    },
+    {
+      "path": "ch1.html",
+      "title": "Identifying subspace using Hierarchical Bayesian Modeling",
+      "author": [],
+      "contents": "\nThere are two main focuses of this chapter:\nWays of identifying the subspace to construct the hierarchy.\nWhich feature or subspace should be at which level.\n\n\n\n",
+      "last_modified": "2021-04-06T11:11:22+08:00"
+    },
+    {
+      "path": "ch2.html",
+      "title": "Baseline Comparison",
+      "author": [],
+      "contents": "\nThe purpose of this chapter is to justify why the hierarchical model works better or why it is important to work on hierarchical modeling.\nThus it has to be compared to some baseline methods.\nI will have to conclude what baseline method/s I want to compare with after I have done my literature review.\n\n\n\n",
+      "last_modified": "2021-04-06T11:11:23+08:00"
+    },
+    {
+      "path": "ch3.html",
+      "title": "Pathway construction",
+      "author": [],
+      "contents": "\nThe purpose of this chapter is to build a sub-model using selected metabolites and use this sub-model to build a bigger model that will incorporate metabolic pathway.\nTherefore this chapter has been organised into two parts:\nBuilding a sub-model using selected metabolites\nThis is basically applying the variable selection method I identified in my literature review.\nUsing the sub-model to build a bigger model by applying the hierarchical model I created in Chapter 1 and 2 and extend it to accomodate pathway construction.\n\n\n\n",
+      "last_modified": "2021-04-06T11:11:23+08:00"
     },
     {
       "path": "content.html",
@@ -14,23 +35,49 @@
       "description": "Content here!\n",
       "author": [],
       "contents": "\ntext here\ncode here\n\n\n\n",
-      "last_modified": "2021-04-06T09:53:09+08:00"
+      "last_modified": "2021-04-06T11:11:24+08:00"
     },
     {
       "path": "index.html",
-      "title": "Novia's Corner",
-      "description": "Welcome to my corner. I hope you enjoy it!\n",
+      "title": "Welcome to my corner",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-04-06T09:53:10+08:00"
+      "contents": "\nThis is my first ever website that I created using Rmarkdown. I am hoping to use this website to host my PhD thesis later on.\nWatch this space for updates.\n\n\n\n",
+      "last_modified": "2021-04-06T11:11:25+08:00"
     },
     {
-      "path": "lit_review.html",
-      "title": "Literature review",
-      "description": "Literature Review - Bayesian Statistics\n",
+      "path": "intro.html",
+      "title": "About me",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-04-06T09:53:11+08:00"
+      "contents": "\nI am a PhD student with the Australian National Phenome Centre at Perth, Western Australia. I am currently investigating if Bayesian statistics can be used to construct a metabolic pathway and if treating this pathway as a hierarchical space will improve phenotype prediction.\n\n\n\n",
+      "last_modified": "2021-04-06T11:11:25+08:00"
+    },
+    {
+      "path": "lit_review1.html",
+      "title": "History of Bayesian",
+      "author": [],
+      "contents": "\nHistory of Bayesian Statistics in general and its application to different fields from 1995 - 2020.\nwhat has changed?\nis there any more problems to be solved?\n\n\n\n",
+      "last_modified": "2021-04-06T11:11:26+08:00"
+    },
+    {
+      "path": "lit_review2.html",
+      "title": "Bayesian in Metabolomic",
+      "author": [],
+      "contents": "\nThe application of Bayesian Statistics in Metabolomics\nIs Bayesian good enough or still adequate for metabolomic data?\nHas anyone done Bayesian to build pathway network?\nBayesian pros and cons\n\n\n\n",
+      "last_modified": "2021-04-06T11:11:27+08:00"
+    },
+    {
+      "path": "lit_review3.html",
+      "title": "Statistical methods in Metabolomic",
+      "author": [],
+      "contents": "\nCommon statistical methods used in metabolomics.\nto establish baseline method for comparison with Bayesian later on.\nwhat methods that are generally used in metabolomics or metabolic phenotyping?\nadvantage?\nlimitations?\n\n\n\n\n",
+      "last_modified": "2021-04-06T11:11:27+08:00"
+    },
+    {
+      "path": "lit_review4.html",
+      "title": "Variable selection in Metabolomic",
+      "author": [],
+      "contents": "\nVariable selection method commonly used in metabolomics\nWhat are the available methods out there?\nBayesian vs. Frequentist selection method\npros and cons of each\nany gap to fill?\nwhat is the most approproate one for metabolites selection?\nNOTE: our metabolites are highly correlated with one another, so whichever method I end up selecting must be able to handle multi-collinearity well and able to impose sparsity to reduce the high-dimensionality.\n\n\n",
+      "last_modified": "2021-04-06T11:11:28+08:00"
     }
   ],
   "collections": []

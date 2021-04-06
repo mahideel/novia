@@ -1,0 +1,16 @@
+---
+title: "Baseline Comparison"
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+The purpose of this chapter is to justify why the hierarchical model works better or why it is important to work on hierarchical modeling. 
+
+Thus it has to be compared to some baseline methods. 
+
+- I will have to conclude what baseline method/s I want to compare with after I have done my literature review. 
+

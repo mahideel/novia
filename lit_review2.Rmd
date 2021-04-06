@@ -1,0 +1,14 @@
+---
+title: "Bayesian in Metabolomic"
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+The application of Bayesian Statistics in Metabolomics 
+
+- Is Bayesian good enough or still adequate for metabolomic data? 
+- Has anyone done Bayesian to build pathway network? 
+- Bayesian pros and cons

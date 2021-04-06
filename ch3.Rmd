@@ -1,0 +1,23 @@
+---
+title: "Pathway construction"
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+The purpose of this chapter is to build a sub-model using selected metabolites and use this sub-model to build a bigger model that will incorporate metabolic pathway. 
+
+Therefore this chapter has been organised into two parts:
+
+1. Building a sub-model using selected metabolites
+
+   This is basically applying the variable selection method I identified in my literature review. 
+
+2. Using the sub-model to build a bigger model by applying the hierarchical model I created in Chapter 1 and 2 and extend it to accomodate pathway construction. 
+
+
+  
+      

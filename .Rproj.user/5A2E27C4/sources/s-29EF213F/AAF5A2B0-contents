@@ -1,16 +1,26 @@
 name: "novia"
-title: "Novia's Corner"
-description: |
-  Novia's Corner
+title: "Novia's corner"
 output_dir: "docs"
 navbar:
   right:
     - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
-    - text: "Content"
+      href: intro.html
+    - text: "Literature Review"
       menu:
-        - text: "Literature Review"
-          href: lit_review.html
+        - text: "History of Bayesian Statistics in general and its application to different fileds from 1995 - 2020"
+          href: lit_review1.html
+        - text: "Bayesian in Metabolomic"
+          href: lit_review2.html
+        - text: "Statistical methods in Metabolomic"
+          href: lit_review3.html
+        - text: "Variable selections in Metabolomic"
+          href: lit_review4.html
+    - text: "Chapter 1"
+      href: ch1.html
+    - text: "Chapter 2"
+      href: ch2.html
+    - text: "Chapter 3"
+      href: ch3.html
+    - icon: fab fa-github
+      href: https://github.com/mahideel
 output: distill::distill_article

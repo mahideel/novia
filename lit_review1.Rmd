@@ -1,0 +1,16 @@
+---
+title: "History of Bayesian"
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+History of Bayesian Statistics in general and its application to different fields from 1995 - 2020. 
+
+- what has changed? 
+- is there any more problems to be solved? 
+
+
+

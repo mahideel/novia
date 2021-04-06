@@ -1,0 +1,13 @@
+---
+title: "Identifying subspace using Hierarchical Bayesian Modeling"
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+There are two main focuses of this chapter: 
+
+  1. Ways of identifying the subspace to construct the hierarchy. 
+  2. Which feature or subspace should be at which level. 

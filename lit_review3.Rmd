@@ -1,0 +1,18 @@
+---
+title: "Statistical methods in Metabolomic"
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+Common statistical methods used in metabolomics. 
+
+- to establish baseline method for comparison with Bayesian later on.
+- what methods that are generally used in metabolomics or metabolic phenotyping? 
+
+  - advantage? 
+  - limitations? 
+  
