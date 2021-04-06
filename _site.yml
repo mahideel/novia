@@ -1,7 +1,7 @@
 name: "novia"
-title: "My Website"
+title: "Novia's Corner"
 description: |
-  My Website
+  Novia's Corner
 output_dir: "docs"
 navbar:
   right:
@@ -10,7 +10,6 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Content"
-      #href: content.html
       menu:
         - text: "Literature Review"
           href: lit_review.html
