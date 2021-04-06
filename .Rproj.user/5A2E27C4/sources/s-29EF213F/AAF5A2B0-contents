@@ -10,7 +10,7 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Content"
-      href: content.html
+      #href: content.html
       menu:
         - text: "Literature Review"
           href: lit_review.html
