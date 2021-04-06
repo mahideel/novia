@@ -7,7 +7,7 @@ navbar:
       href: intro.html
     - text: "Literature Review"
       menu:
-        - text: "History of Bayesian Statistics in general and its application to different fileds from 1995 - 2020"
+        - text: "History of Bayesian Statistics in general and its application to different fields from 1995 - 2020"
           href: lit_review1.html
         - text: "Bayesian in Metabolomic"
           href: lit_review2.html
