@@ -3,7 +3,7 @@
     "path": "~/Documents/novia/_site.yml",
     "project_path": "_site.yml",
     "type": "yaml",
-    "hash": "2568662116",
+    "hash": "3701350619",
     "contents": "",
     "dirty": false,
     "created": 1617254277177.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "12,23",
-        "scrollLine": "0"
+        "cursorPosition": "12,24",
+        "scrollLine": "2"
     },
     "folds": "",
-    "lastKnownWriteTime": 1617254833,
+    "lastKnownWriteTime": 1617669603,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1617254833919,
+    "last_content_update": 1617669603320,
     "read_only": false,
     "read_only_alternatives": []
 }
