@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-04-06T09:42:22+08:00"
+      "last_modified": "2021-04-06T09:53:09+08:00"
     },
     {
       "path": "content.html",
@@ -14,7 +14,7 @@
       "description": "Content here!\n",
       "author": [],
       "contents": "\ntext here\ncode here\n\n\n\n",
-      "last_modified": "2021-04-06T09:50:57+08:00"
+      "last_modified": "2021-04-06T09:53:09+08:00"
     },
     {
       "path": "index.html",
@@ -22,7 +22,7 @@
       "description": "Welcome to my corner. I hope you enjoy it!\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-04-06T09:51:28+08:00"
+      "last_modified": "2021-04-06T09:53:10+08:00"
     },
     {
       "path": "lit_review.html",
@@ -30,7 +30,7 @@
       "description": "Literature Review - Bayesian Statistics\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-04-06T09:44:07+08:00"
+      "last_modified": "2021-04-06T09:53:11+08:00"
     }
   ],
   "collections": []
