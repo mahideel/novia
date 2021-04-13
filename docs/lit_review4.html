@@ -86,26 +86,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Novia's corner: Variable selection in Metabolomic</title>
+  <title>Novia's corner: Bayesian in Metabolomic</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Novia&#39;s corner: Variable selection in Metabolomic"/>
+  <meta property="og:title" content="Novia&#39;s corner: Bayesian in Metabolomic"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Novia&#39;s corner"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Novia&#39;s corner: Variable selection in Metabolomic"/>
+  <meta property="twitter:title" content="Novia&#39;s corner: Bayesian in Metabolomic"/>
 
   <!--/radix_placeholder_meta_tags-->
+  
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Variable selection in Metabolomic"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Bayesian in Metabolomic"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["novia_ref.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2050,7 +2051,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Variable selection in Metabolomic","authors":[]}
+{"title":"Bayesian in Metabolomic","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2069,16 +2070,17 @@ Literature Review
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="lit_review1.html">History of Bayesian Statistics from 1995 - 2020</a>
-<a href="lit_review2.html">Bayesian in Metabolomic</a>
+<a href="lit_review1.html">Brief overview of Bayesian</a>
+<a href="lit_review2.html">Covid-19 and Metabolomic</a>
 <a href="lit_review3.html">Statistical methods in Metabolomic</a>
-<a href="lit_review4.html">Variable selections in Metabolomic</a>
+<a href="lit_review4.html">Bayesian in Metabolomic</a>
 </div>
 </div>
 <a href="ch1.html">Chapter 1</a>
 <a href="ch2.html">Chapter 2</a>
 <a href="ch3.html">Chapter 3</a>
-<a href="https://github.com/mahideel">
+<a href="slides/slides.html">Slides</a>
+<a href="https://github.com/mahideel/novia">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
@@ -2090,7 +2092,7 @@ Literature Review
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Variable selection in Metabolomic</h1>
+<h1>Bayesian in Metabolomic</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2098,20 +2100,16 @@ Literature Review
 
 
 <div class="d-article">
-<p>Variable selection method commonly used in metabolomics</p>
-<ul>
-<li><p>What are the available methods out there?</p></li>
-<li><p>Bayesian vs. Frequentist selection method</p>
-<ul>
-<li><p>pros and cons of each</p></li>
-<li><p>any gap to fill?</p></li>
-<li><p>what is the most approproate one for metabolites selection?</p>
-<ul>
-<li>NOTE: our metabolites are highly correlated with one another, so whichever method I end up selecting must be able to handle multi-collinearity well and able to impose sparsity to reduce the high-dimensionality.</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div></li>
-</ul></li>
-</ul>
+<p>Bayesian workflow <span class="citation" data-cites="van2021bayesian">(<a href="#ref-van2021bayesian" role="doc-biblioref">Schoot et al. 2021</a>)</span></p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figure/Fig1_HTML.png" width="840" /></p>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-van2021bayesian" class="csl-entry" role="doc-biblioentry">
+Schoot, Rens van de, Sarah Depaoli, Ruth King, Bianca Kramer, Kaspar Märtens, Mahlet G Tadesse, Marina Vannucci, et al. 2021. <span>“Bayesian Statistics and Modelling.”</span> <em>Nature Reviews Methods Primers</em> 1 (1): 1–26.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2123,7 +2121,10 @@ Literature Review
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

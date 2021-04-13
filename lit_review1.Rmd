@@ -1,16 +1,32 @@
 ---
-title: "History of Bayesian"
+title: "Brief overview of Bayesian Statistics"
 site: distill::distill_website
+bibliography: novia_ref.bib
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
 ```
-History of Bayesian Statistics in general and its application to different fields from 1995 - 2020. 
 
-- what has changed? 
-- is there any more problems to be solved? 
+Bayesian statistics began when Bayes theorem was first postulated by The Rev Thomas Bayes in 1763 [@bayes1763lii] \@ref(eq:bayes).  Bayes theorem has been described as a way of combining a prior distribution for a parameter with the likelihood to provide a posterior distribution for the parameter [@cox1979theoretical]. 
 
 
+\[p\left(\frac{\theta}{x}\right)=p\left(x\mid\theta\right)p\left(\theta\right) 
+  (\#eq:bayes) 
+\]
+
+In other words, the computation of the posterior requires three terms: a prior [$p\left(\theta\right)$], a likelihood [$p\left(x\mid\theta\right)$] and an observation [$p\left(x\mid\theta\right)$]. The prior and likelihood can easily be computed as they are part of the assumed knowledge or model. The observation, which is a normalisation factor, requires complex integration that becomes intractable in high dimensions \@ref(eq:bayesintegral). 
+
+\[p(x)=\int_{\theta}p\left(x\mid\theta\right)p\left(\theta\right)d\theta
+  (\#eq:bayesintegral)
+\]
+
+The emergence of Markov Chain Monte Carlo  (MCMC) coupled with the advancement of computational power/method in 1990s changed the game altogether [@ashby2006bayesian]. It makes the calculation of those complex integration possible. 1990s is a time of rapid expansion for Bayesian statistics. 
+
+The power of MCMC were widely applied in various aspects of medicine, for example, disease screening, immunology, genetic and epidemiology.  
+
+The application of Bayesian statistics was gradually focusing on not just building a model using conditional independence modeling but more so on the application of hierarchical models and longitudinal models to tackle various medical challenges [@ashby2006bayesian], such as prevalence estimates for depression in adolescents from two-stage sampling [@erkanli1997bayesian] and hierarchical model for multi-level repeated ordinal data in anesthesiology [@tan1999bayesian]. 
+
+In more recent time (2000 - today), faster computational methods and the advancement in the omics field have enabled Bayesian statistics to be used to address even more complex medical applications, such as Markov modelling of changes in HIV-specific cytotoxic T-lymphocyte responses in untreated patients [@kousignian2003markov], hierarchical modelling for spatio-temporal modelling of influenza [@mugglin2002hierarchical], and DNA sequence segmentation [@boys2004bayesian]. 
 

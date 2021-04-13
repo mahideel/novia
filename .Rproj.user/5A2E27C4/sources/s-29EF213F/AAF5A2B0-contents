@@ -7,13 +7,13 @@ navbar:
       href: intro.html
     - text: "Literature Review"
       menu:
-        - text: "History of Bayesian Statistics from 1995 - 2020"
+        - text: "Brief overview of Bayesian"
           href: lit_review1.html
-        - text: "Bayesian in Metabolomic"
+        - text: "Covid-19 and Metabolomic"
           href: lit_review2.html
         - text: "Statistical methods in Metabolomic"
           href: lit_review3.html
-        - text: "Variable selections in Metabolomic"
+        - text: "Bayesian in Metabolomic"
           href: lit_review4.html
     - text: "Chapter 1"
       href: ch1.html
@@ -21,6 +21,9 @@ navbar:
       href: ch2.html
     - text: "Chapter 3"
       href: ch3.html
+    - text: "Slides"
+      href: slides/slides.html
     - icon: fab fa-github
-      href: https://github.com/mahideel
+      href: https://github.com/mahideel/novia
+bibliography: novia_ref.bib
 output: distill::distill_article

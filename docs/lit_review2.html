@@ -86,26 +86,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Novia's corner: Bayesian in Metabolomic</title>
+  <title>Novia's corner: Covid-19 pandemic from metabolomic perspective</title>
 
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Novia&#39;s corner: Bayesian in Metabolomic"/>
+  <meta property="og:title" content="Novia&#39;s corner: Covid-19 pandemic from metabolomic perspective"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Novia&#39;s corner"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Novia&#39;s corner: Bayesian in Metabolomic"/>
+  <meta property="twitter:title" content="Novia&#39;s corner: Covid-19 pandemic from metabolomic perspective"/>
 
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Coronavirus disease (COVID-19) pandemic;citation_publication_date=2021;citation_author=World Health Organization WHO"/>
+  <meta name="citation_reference" content="citation_title=Comprehensive meta-analysis of COVID-19 global metabolomics datasets;citation_publication_date=2021;citation_publisher=Multidisciplinary Digital Publishing Institute;citation_volume=11;citation_author=Zhiqiang Pang;citation_author=Guangyan Zhou;citation_author=Jasmine Chong;citation_author=Jianguo Xia"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Bayesian in Metabolomic"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Covid-19 pandemic from metabolomic perspective"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["novia_ref.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2050,7 +2053,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Bayesian in Metabolomic","authors":[]}
+{"title":"Covid-19 pandemic from metabolomic perspective","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2069,16 +2072,16 @@ Literature Review
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="lit_review1.html">History of Bayesian Statistics from 1995 - 2020</a>
-<a href="lit_review2.html">Bayesian in Metabolomic</a>
+<a href="lit_review1.html">Brief overview of Bayesian</a>
+<a href="lit_review2.html">Covid-19 and Metabolomic</a>
 <a href="lit_review3.html">Statistical methods in Metabolomic</a>
-<a href="lit_review4.html">Variable selections in Metabolomic</a>
 </div>
 </div>
 <a href="ch1.html">Chapter 1</a>
 <a href="ch2.html">Chapter 2</a>
 <a href="ch3.html">Chapter 3</a>
-<a href="https://github.com/mahideel">
+<a href="slides/slides.html">Slides</a>
+<a href="https://github.com/mahideel/novia">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
@@ -2090,7 +2093,7 @@ Literature Review
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Bayesian in Metabolomic</h1>
+<h1>Covid-19 pandemic from metabolomic perspective</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2098,13 +2101,44 @@ Literature Review
 
 
 <div class="d-article">
-<p>The application of Bayesian Statistics in Metabolomics</p>
-<ul>
-<li>Is Bayesian good enough or still adequate for metabolomic data?</li>
-<li>Has anyone done Bayesian to build pathway network?</li>
-<li>Bayesian pros and cons</li>
-</ul>
+<p>As of 7th April 2021, the COVID-19 pandemic, caused by severe acute respiratory syndrome coronavirus 2 (SARS-Cov-2), has spread to 223 countries, infected &gt; 133.5 million people and killed &gt; 2.8 million people <span class="citation" data-cites="whocovid19">(<a href="#ref-whocovid19" role="doc-biblioref">WHO 2021</a>)</span>.</p>
+<p>Similar to other viral infections, every individual responses differently to the virus. Most individuals experience mild sore throat, fever and fatigue. Some are even asymptomatic. However, a subset of individuals experience severe respiratory distress, organ failure and cytokine storm that results in death <span class="citation" data-cites="ayres2020metabolic kimhofer2020integrative">(<a href="#ref-ayres2020metabolic" role="doc-biblioref">Ayres 2020</a>; <a href="#ref-kimhofer2020integrative" role="doc-biblioref">Kimhofer et al. 2020</a>)</span>.</p>
+<p>Multiple metabolomics studies have been conducted in an attempt to unravel COVID-19. They found that several amino acids were found to be positively correlated with COVID-19 <span class="citation" data-cites="pang2021comprehensive delafiori2021covid cai2020kynurenic blasco2020specific thomas2020covid kimhofer2020integrative">(<a href="#ref-pang2021comprehensive" role="doc-biblioref">Pang et al. 2021</a>; <a href="#ref-delafiori2021covid" role="doc-biblioref">Delafiori et al. 2021</a>; <a href="#ref-cai2020kynurenic" role="doc-biblioref">Cai et al. 2020</a>; <a href="#ref-blasco2020specific" role="doc-biblioref">Blasco et al. 2020</a>; <a href="#ref-thomas2020covid" role="doc-biblioref">Thomas et al. 2020</a>; <a href="#ref-kimhofer2020integrative" role="doc-biblioref">Kimhofer et al. 2020</a>)</span>.</p>
+<p>Several common pathways, such as porphyrin, cellular amino acidarachidonic acid metabolism were found to be significantly perturbed in COVID-19 patients <span class="citation" data-cites="pang2021comprehensive">(@ <a href="#ref-pang2021comprehensive" role="doc-biblioref">Pang et al. 2021</a>)</span>. Propanoate metabolism, was identified by Pang et al (2021) as a novel pathway in the progression of COVID-19. Other metabolic pathways such as TCA, selenocompound, mannose and glutathione metabolism were found to be associated with the progression and severity of COVID-19 <span class="citation" data-cites="pang2021comprehensive polonikov2020endogenous li2020insight">(<a href="#ref-pang2021comprehensive" role="doc-biblioref">Pang et al. 2021</a>; <a href="#ref-polonikov2020endogenous" role="doc-biblioref">Polonikov 2020</a>; <a href="#ref-li2020insight" role="doc-biblioref">Li et al. 2020</a>)</span></p>
+<p>Simply put, our immune system relies on multiple metabolic pathways, such as amino acid, energy and lipid metabolism, to initiate and regulate response to COVID-19. Thus it is extremely important to take these pathways information or knowledge into account when conducting a statistical analysis.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-ayres2020metabolic" class="csl-entry" role="doc-biblioentry">
+Ayres, Janelle S. 2020. <span>“A Metabolic Handbook for the COVID-19 Pandemic.”</span> <em>Nature Metabolism</em> 2 (7): 572–85.
+</div>
+<div id="ref-blasco2020specific" class="csl-entry" role="doc-biblioentry">
+Blasco, H, C Bessy, L Plantier, A Lefevre, E Piver, L Bernard, J Marlet, et al. 2020. <span>“The Specific Metabolome Profiling of Patients Infected by SARS-COV-2 Supports the Key Role of Tryptophan-Nicotinamide Pathway and Cytosine Metabolism.”</span> <em>Scientific Reports</em> 10 (1): 1–12.
+</div>
+<div id="ref-cai2020kynurenic" class="csl-entry" role="doc-biblioentry">
+Cai, Yuping, Daniel J Kim, Takehiro Takahashi, David I Broadhurst, Shuangge Ma, Nicholas JW Rattray, Arnau Casanovas-Massana, et al. 2020. <span>“Kynurenic Acid Underlies Sex-Specific Immune Responses to COVID-19.”</span> <em>MedRxiv</em>.
+</div>
+<div id="ref-delafiori2021covid" class="csl-entry" role="doc-biblioentry">
+Delafiori, Jeany, Luiz Claudio Navarro, Rinaldo Focaccia Siciliano, Gisely Cardoso De Melo, Estela Natacha Brandt Busanello, José Carlos Nicolau, Geovana Manzan Sales, et al. 2021. <span>“Covid-19 Automated Diagnosis and Risk Assessment Through Metabolomics and Machine Learning.”</span> <em>Analytical Chemistry</em> 93 (4): 2471–79.
+</div>
+<div id="ref-kimhofer2020integrative" class="csl-entry" role="doc-biblioentry">
+Kimhofer, Torben, Samantha Lodge, Luke Whiley, Nicola Gray, Ruey Leng Loo, Nathan G Lawler, Philipp Nitschke, et al. 2020. <span>“Integrative Modeling of Quantitative Plasma Lipoprotein, Metabolic, and Amino Acid Data Reveals a Multiorgan Pathological Signature of SARS-CoV-2 Infection.”</span> <em>Journal of Proteome Research</em> 19 (11): 4442–54.
+</div>
+<div id="ref-li2020insight" class="csl-entry" role="doc-biblioentry">
+Li, Zhi, Guoliang Liu, Ling Wang, Yong Liang, Qunfang Zhou, Fei Wu, Jing Yao, and Bolei Chen. 2020. <span>“From the Insight of Glucose Metabolism Disorder: Oxygen Therapy and Blood Glucose Monitoring Are Crucial for Quarantined COVID-19 Patients.”</span> <em>Ecotoxicology and Environmental Safety</em> 197: 110614.
+</div>
+<div id="ref-pang2021comprehensive" class="csl-entry" role="doc-biblioentry">
+Pang, Zhiqiang, Guangyan Zhou, Jasmine Chong, and Jianguo Xia. 2021. <span>“Comprehensive Meta-Analysis of COVID-19 Global Metabolomics Datasets.”</span> <em>Metabolites</em> 11 (1): 44.
+</div>
+<div id="ref-polonikov2020endogenous" class="csl-entry" role="doc-biblioentry">
+Polonikov, Alexey. 2020. <span>“Endogenous Deficiency of Glutathione as the Most Likely Cause of Serious Manifestations and Death in COVID-19 Patients.”</span> <em>ACS Infectious Diseases</em> 6 (7): 1558–62.
+</div>
+<div id="ref-thomas2020covid" class="csl-entry" role="doc-biblioentry">
+Thomas, Tiffany, Davide Stefanoni, Julie A Reisz, Travis Nemkov, Lorenzo Bertolone, Richard O Francis, Krystalyn E Hudson, et al. 2020. <span>“COVID-19 Infection Alters Kynurenine and Fatty Acid Metabolism, Correlating with IL-6 Levels and Renal Status.”</span> <em>JCI Insight</em> 5 (14).
+</div>
+<div id="ref-whocovid19" class="csl-entry" role="doc-biblioentry">
+WHO, World Health Organization. 2021. <span>“Coronavirus Disease (COVID-19) Pandemic.”</span> <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">https://www.who.int/emergencies/diseases/novel-coronavirus-2019</a>.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2116,7 +2150,10 @@ Literature Review
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

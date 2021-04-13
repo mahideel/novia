@@ -102,10 +102,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta property="twitter:title" content="Novia&#39;s corner: Statistical methods in Metabolomic"/>
 
   <!--/radix_placeholder_meta_tags-->
+  
+  <meta name="citation_reference" content="citation_title=Computational and statistical analysis of metabolomics data;citation_publication_date=2015;citation_publisher=Springer;citation_volume=11;citation_author=Sheng Ren;citation_author=Anna A Hinzman;citation_author=Emily L Kang;citation_author=Rhonda D Szczesniak;citation_author=Long Jason Lu"/>
+  <meta name="citation_reference" content="citation_title=Comparative analysis of targeted metabolomics: Dominance-based rough set approach versus orthogonal partial least square-discriminant analysis;citation_publication_date=2015;citation_publisher=Elsevier;citation_volume=53;citation_author=Hélène Blasco;citation_author=J Błaszczyński;citation_author=Jean-Charles Billaut;citation_author=Lydie Nadal-Desbarats;citation_author=Pierre-François Pradat;citation_author=DAVID Devos;citation_author=Caroline Moreau;citation_author=Christian R Andres;citation_author=Patrick Emond;citation_author=Philippe Corcia;citation_author=Comparative analysis of targeted metabolomics: Dominance-based rough set approach versus orthogonal partial least square-discriminant analysis"/>
+  <meta name="citation_reference" content="citation_title=Partial least squares discriminant analysis: Taking the magic away;citation_publication_date=2014;citation_publisher=Wiley Online Library;citation_volume=28;citation_author=Richard G Brereton;citation_author=Gavin R Lloyd"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site"]}},"value":[{"type":"character","attributes":{},"value":["Statistical methods in Metabolomic"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","bibliography"]}},"value":[{"type":"character","attributes":{},"value":["Statistical methods in Metabolomic"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["novia_ref.bib"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2069,16 +2073,17 @@ Literature Review
 <span class="down-arrow">&#x25BE;</span>
 </button>
 <div class="nav-dropdown-content">
-<a href="lit_review1.html">History of Bayesian Statistics from 1995 - 2020</a>
-<a href="lit_review2.html">Bayesian in Metabolomic</a>
+<a href="lit_review1.html">Brief overview of Bayesian</a>
+<a href="lit_review2.html">Covid-19 and Metabolomic</a>
 <a href="lit_review3.html">Statistical methods in Metabolomic</a>
-<a href="lit_review4.html">Variable selections in Metabolomic</a>
+<a href="lit_review4.html">Bayesian in Metabolomic</a>
 </div>
 </div>
 <a href="ch1.html">Chapter 1</a>
 <a href="ch2.html">Chapter 2</a>
 <a href="ch3.html">Chapter 3</a>
-<a href="https://github.com/mahideel">
+<a href="slides/slides.html">Slides</a>
+<a href="https://github.com/mahideel/novia">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
@@ -2098,16 +2103,72 @@ Literature Review
 
 
 <div class="d-article">
-<p>Common statistical methods used in metabolomics.</p>
+<p>The most common statistical methods used to analyse metabolomics data are Principal component analysis (PCA) for unsupervised learning and Partial least squares-discriminant analysis (PLS-DA) or Orthogonal projections to laten structures-discriminant analysis (OPLS-DA) for supervised one <span class="citation" data-cites="gromski2015tutorial ren2015computational lee2018partial">(<a href="#ref-gromski2015tutorial" role="doc-biblioref">Gromski et al. 2015</a>; <a href="#ref-ren2015computational" role="doc-biblioref">Ren et al. 2015</a>; <a href="#ref-lee2018partial" role="doc-biblioref">Lee, Liong, and Jemain 2018</a>)</span>.</p>
 <ul>
-<li><p>to establish baseline method for comparison with Bayesian later on.</p></li>
-<li><p>what methods that are generally used in metabolomics or metabolic phenotyping?</p>
+<li>put graph similar to Gromski et al (2015) Fig1 page 13.</li>
+</ul>
+<p>In 2020 alone, there are 137 metabolomics studies that includes PLS-DA as a tool for the analysis of metabolomics data (from PubMed using keywords [metabolomic; PLS and PLS-DA]).</p>
+<p>In metabolomic studies, we tend to get a high-dimensional dataset, e.g. hundreds of metabolites, peak locations. What we want is to find a few combinations of those variables that would be best explain the total variation in the original dataset <span class="citation" data-cites="ren2015computational">(<a href="#ref-ren2015computational" role="doc-biblioref">Ren et al. 2015</a>)</span>. In other words, we need to significantly reduce the dimensionality of our dataset. This is where PCA comes in.</p>
+<p>PCA is widely used as a dimension-reduction method. Its main aim is to replace all correlated variables by a much smaller number of uncorrelated variables (Principal Components or PCs) while still retaining most of the original information <span class="citation" data-cites="ren2015computational">(<a href="#ref-ren2015computational" role="doc-biblioref">Ren et al. 2015</a>)</span> by producing the weight matrix reflecting the covariance structure between the variables.</p>
+<p>PCA is often used as a precursor or preliminary step prior to conducting PLS-DA.</p>
+<p>PLS-DA can be regarded as a linear two-class classifier which aims to find a straight line that divides the space into two regions <span class="citation" data-cites="brereton2014partial">(<a href="#ref-brereton2014partial" role="doc-biblioref">Brereton and Lloyd 2014</a>)</span>. It is similar to PCA in a sense that it also produces the weight matrix reflecting the covariance structure between the variables, and also classes. After rotation by weight matrix, the new variables would contain relationship with classes.</p>
+<p>The fundamental of PLS-DA equations are <span class="citation" data-cites="wold2001pls ren2015computational">(<a href="#ref-wold2001pls" role="doc-biblioref">Wold, Sjöström, and Eriksson 2001</a>; <a href="#ref-ren2015computational" role="doc-biblioref">Ren et al. 2015</a>)</span>:</p>
+<p><span class="math display">\[
+Y=UQ&#39;+F
+\]</span> <span class="math display">\[
+X=TP&#39;+E
+\]</span></p>
+<p><em>T</em> and <em>U</em> are called <em>X</em> and <em>Y</em> scores matrices formed by latent variables. <em>P</em> and <em>Q</em> are called <em>X</em> and <em>Y</em> loadings that serves as weight matrices. <em>E</em> and <em>F</em> are residuals, which are the remaining variations that can not be explained by latent variables.</p>
+<p>OPLS-DA is an extension of PLS-DA. It is designed to remove systematic variation in <em>X</em> that is orthogonal to <em>Y</em> in an attempt to enhance the interpretation of PLS <span class="citation" data-cites="wold2001pls ren2015computational">(<a href="#ref-wold2001pls" role="doc-biblioref">Wold, Sjöström, and Eriksson 2001</a>; <a href="#ref-ren2015computational" role="doc-biblioref">Ren et al. 2015</a>)</span>.</p>
+<p>The combination of PCA and PLS-DA has been found to be powerful. However, there are some limitations that are associated with these methods.</p>
+<p>Limitations associated with PCA <span class="citation" data-cites="ren2015computational blasco2015comparative">(<a href="#ref-ren2015computational" role="doc-biblioref">Ren et al. 2015</a>; <a href="#ref-blasco2015comparative" role="doc-biblioref">Blasco et al. 2015</a>)</span>:</p>
 <ul>
-<li>advantage?</li>
-<li>limitations?</li>
+<li>Prone to outliers</li>
+<li>The groups that are shown in the PCA scores plot are not necessarily the biologically meaningful groups.</li>
+<li>PCA only works if the first few PCs can explain a large proportion of the variability. Otherwise, the visualisation results may be misleading.</li>
+</ul>
+<p>Limitations associated with PLS-DA <span class="citation" data-cites="gromski2015tutorial ren2015computational lee2018partial brereton2014partial">(<a href="#ref-gromski2015tutorial" role="doc-biblioref">Gromski et al. 2015</a>; <a href="#ref-ren2015computational" role="doc-biblioref">Ren et al. 2015</a>; <a href="#ref-lee2018partial" role="doc-biblioref">Lee, Liong, and Jemain 2018</a>; <a href="#ref-brereton2014partial" role="doc-biblioref">Brereton and Lloyd 2014</a>)</span>:</p>
+<ul>
+<li>Does not handle missing values well.</li>
+<li>Tend to overfit when the number of variables is significantly greater than the number of samples (p&gt;&gt;n issue).</li>
+<li>The internal validation may be too optimistic.</li>
+<li>Can be misleading when the number of variables is significantly greater than the number of samples (p&gt;&gt;n issue).
+<ul>
+<li>The problem is that because there are so many variables, there are some correlations that occurred just by chance.
+<ul>
+<li>Brereton and Lloyd (2015) .</li>
 </ul></li>
+</ul></li>
+<li>Does not incorporate pathway information.
+<ul>
+<li>Blasco et al (2015) did a comparative analysis of targeted metabolomics. They conducted H Nuclear Magnetic Resonance (NMR) analysis of cerebrospinal fluids (CSF) from patients with amyotrophic lateral sclerosis (ALS) and non-ALS patients. The aim of their study was to discriinate ALS patients and non-ALS subjects and to identify the variables relevant for this discrimination <span class="citation" data-cites="blasco2015comparative">(<a href="#ref-blasco2015comparative" role="doc-biblioref">Blasco et al. 2015</a>)</span>.
+<ul>
+<li>It was found that the most relevant metabolites to explain ALS are low concentration of acetate and high concentration of pyruvate. Alamine was not identified as relevant, however, it appears to be important when associated with high levels of pyruvate. Another metabolite, creatinine-creatinine were also not found to be relevant. However, this metabolite pair increases in importance when associated with low level of pyruvate. The above finding implicates pyruvate in the pathogenesis of ALS. This illustrates how important it is to take the interpretation of biochemical pathway into consideration as they provide the big picture of the dynamic of the overall metabolism.</li>
+</ul></li>
+</ul></li>
+<li>Can not incorporate individual level of information - every individual responses differently to COVID-19. Every individual has their own timeline associated with fighting this virus. This has significant bearings on the dynamic of metabolic perturbation that occurs in each individual. Echoing what has been said in numerous COVID-19 studies, each individual’s immune system is unique, it relies on multiple metabolic pathways to initiate and regulate response to COVID-19 It is therefore vital to choose a statistical method that can incorporate these individual level’s information including pathways information into account in model building.</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-blasco2015comparative" class="csl-entry" role="doc-biblioentry">
+Blasco, Hélène, J Błaszczyński, Jean-Charles Billaut, Lydie Nadal-Desbarats, Pierre-François Pradat, DAVID Devos, Caroline Moreau, et al. 2015. <span>“Comparative Analysis of Targeted Metabolomics: Dominance-Based Rough Set Approach Versus Orthogonal Partial Least Square-Discriminant Analysis.”</span> <em>Journal of Biomedical Informatics</em> 53: 291–99.
+</div>
+<div id="ref-brereton2014partial" class="csl-entry" role="doc-biblioentry">
+Brereton, Richard G, and Gavin R Lloyd. 2014. <span>“Partial Least Squares Discriminant Analysis: Taking the Magic Away.”</span> <em>Journal of Chemometrics</em> 28 (4): 213–25.
+</div>
+<div id="ref-gromski2015tutorial" class="csl-entry" role="doc-biblioentry">
+Gromski, Piotr S, Howbeer Muhamadali, David I Ellis, Yun Xu, Elon Correa, Michael L Turner, and Royston Goodacre. 2015. <span>“A Tutorial Review: Metabolomics and Partial Least Squares-Discriminant Analysis–a Marriage of Convenience or a Shotgun Wedding.”</span> <em>Analytica Chimica Acta</em> 879: 10–23.
+</div>
+<div id="ref-lee2018partial" class="csl-entry" role="doc-biblioentry">
+Lee, Loong Chuen, Choong-Yeun Liong, and Abdul Aziz Jemain. 2018. <span>“Partial Least Squares-Discriminant Analysis (PLS-DA) for Classification of High-Dimensional (HD) Data: A Review of Contemporary Practice Strategies and Knowledge Gaps.”</span> <em>Analyst</em> 143 (15): 3526–39.
+</div>
+<div id="ref-ren2015computational" class="csl-entry" role="doc-biblioentry">
+Ren, Sheng, Anna A Hinzman, Emily L Kang, Rhonda D Szczesniak, and Long Jason Lu. 2015. <span>“Computational and Statistical Analysis of Metabolomics Data.”</span> <em>Metabolomics</em> 11 (6): 1492–1513.
+</div>
+<div id="ref-wold2001pls" class="csl-entry" role="doc-biblioentry">
+Wold, Svante, Michael Sjöström, and Lennart Eriksson. 2001. <span>“PLS-Regression: A Basic Tool of Chemometrics.”</span> <em>Chemometrics and Intelligent Laboratory Systems</em> 58 (2): 109–30.
+</div>
+</div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2115,11 +2176,23 @@ Literature Review
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="references">References</h3>
+<div id="references-listing"></div>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

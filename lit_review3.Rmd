@@ -1,18 +1,65 @@
 ---
 title: "Statistical methods in Metabolomic"
 site: distill::distill_website
+bibliography: novia_ref.bib
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
 ```
+The most common statistical methods used to analyse metabolomics data are Principal component analysis (PCA) for unsupervised learning and Partial least squares-discriminant analysis (PLS-DA) or Orthogonal projections to laten structures-discriminant analysis (OPLS-DA) for supervised one [@gromski2015tutorial; @ren2015computational; @lee2018partial]. 
 
-Common statistical methods used in metabolomics. 
+- put graph similar to Gromski et al (2015) Fig1 page 13.
 
-- to establish baseline method for comparison with Bayesian later on.
-- what methods that are generally used in metabolomics or metabolic phenotyping? 
+In 2020 alone, there are 137 metabolomics studies that includes PLS-DA as a tool for the analysis of metabolomics data (from PubMed using keywords [metabolomic; PLS and PLS-DA]).
 
-  - advantage? 
-  - limitations? 
-  
+In metabolomic studies, we tend to get a high-dimensional dataset, e.g. hundreds of metabolites, peak locations. What we want is to find a few combinations of those variables that would be best explain the total variation in the original dataset [@ren2015computational]. In other words, we need to significantly reduce the dimensionality of our dataset. This is where PCA comes in.
+
+PCA is widely used as a dimension-reduction method. Its main aim is to replace all correlated variables by a much smaller number of uncorrelated variables (Principal Components or PCs) while still retaining most of the original information [@ren2015computational] by producing the weight matrix reflecting the covariance structure between the variables. 
+
+PCA is often used as a precursor or preliminary step prior to conducting PLS-DA. 
+
+PLS-DA can be regarded as a linear two-class classifier which aims to find a straight line that divides the space into two regions [@brereton2014partial]. It is similar to PCA in a sense that it also produces the weight matrix reflecting the covariance structure between the variables, and also classes. After rotation by weight matrix, the new variables would contain relationship with classes.
+
+The fundamental of PLS-DA equations are [@wold2001pls; @ren2015computational]: 
+
+\[
+Y=UQ'+F
+\]
+\[
+X=TP'+E
+\]
+
+ *T* and *U* are called *X* and *Y* scores matrices formed by latent variables. 
+ *P* and *Q* are called *X* and *Y* loadings that serves as weight matrices.
+ *E* and *F* are residuals, which are the remaining variations that can not be explained by latent variables. 
+
+OPLS-DA is an extension of PLS-DA. It is designed to remove systematic variation in *X* that is orthogonal to *Y* in an attempt to enhance the interpretation of PLS [@wold2001pls; @ren2015computational]. 
+
+The combination of PCA and PLS-DA has been found to be powerful. However, there are some limitations that are associated with these methods. 
+
+Limitations associated with PCA [@ren2015computational; @blasco2015comparative]: 
+
+- Prone to outliers
+- The groups that are shown in the PCA scores plot are not necessarily the biologically meaningful groups. 
+- PCA only works if the first few PCs can explain a large proportion of the variability. Otherwise, the visualisation results may be misleading. 
+
+
+Limitations associated with PLS-DA [@gromski2015tutorial; @ren2015computational; @lee2018partial; @]: 
+
+- Does not handle missing values well.
+- Tend to overfit when the number of variables is significantly greater than the number of samples (p>>n issue). 
+- The internal validation may be too optimistic. 
+- Can be misleading when the number of variables is significantly greater than the number of samples (p>>n issue). 
+  - The problem is that because there are so many variables, there are some correlations that occurred just by chance [@brereton2014partial]. 
+- Does not incorporate pathway information. 
+    - Blasco et al (2015) did a comparative analysis of targeted metabolomics. They conducted H Nuclear Magnetic Resonance (NMR) analysis of cerebrospinal fluids (CSF) from patients with amyotrophic lateral sclerosis (ALS) and non-ALS patients. The aim of their study was to discriinate ALS patients and non-ALS subjects and to identify the variables relevant for this discrimination [@blasco2015comparative]. 
+      - It was found that the most relevant metabolites to explain ALS are low concentration of acetate and high concentration of pyruvate. Alamine was not identified as relevant, however, it appears to be important when associated with high levels of pyruvate. 
+      - Another metabolite, creatinine-creatinine were also not found to be relevant. However, this metabolite pair increases in importance when associated with low level of pyruvate. 
+      - The above finding illustrates how important it is to take the interpretation of biochemical pathway into consideration as they provide the big picture of the dynamic of the overall metabolism. Some metabolites may not be directly associated with the outcome but they could serve as an 'indirect indicator' due to their strong association with the relevant metabolites. 
+    
+- Can not incorporate individual level of information - every individual responses differently to COVID-19. Every individual has their own timeline associated with fighting this virus. This has significant bearings on the dynamic of metabolic perturbation that occurs in each individual. Echoing what has been said in numerous COVID-19 studies, each individual's immune system is unique, it relies on multiple metabolic pathways to initiate and regulate response to COVID-19 It is therefore vital to choose a statistical method that can incorporate these individual level's information including pathways information into account in model building. 
+
+
+

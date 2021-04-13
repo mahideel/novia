@@ -10,4 +10,4 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 I am a PhD student with the Australian National Phenome Centre at Perth, Western Australia. 
-I am currently investigating if Bayesian statistics can be used to construct a metabolic pathway and if treating this pathway as a hierarchical space will improve phenotype prediction. 
+I am currently investigating the use of Bayesian statistics can be used to incorporate metabolic pathways in a hierarchical space of a model and whether this will improve phenotype prediction. 
