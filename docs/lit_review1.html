@@ -2081,7 +2081,7 @@ Literature Review
 <a href="lit_review1.html">Brief overview of Bayesian</a>
 <a href="lit_review2.html">Covid-19 and Metabolomic</a>
 <a href="lit_review3.html">Statistical methods in Metabolomic</a>
-<a href="lit_review4.html">Variable selections in Metabolomic</a>
+<a href="lit_review4.html">Bayesian in Metabolomic</a>
 </div>
 </div>
 <a href="ch1.html">Chapter 1</a>
@@ -2109,7 +2109,7 @@ Literature Review
 
 <div class="d-article">
 <p>Bayesian statistics began when Bayes theorem was first postulated by The Rev Thomas Bayes in 1763 <span class="citation" data-cites="bayes1763lii">(<a href="#ref-bayes1763lii" role="doc-biblioref">Bayes 1763</a>)</span> <a href="#eq:bayes">(1)</a>. Bayes theorem has been described as a way of combining a prior distribution for a parameter with the likelihood to provide a posterior distribution for the parameter <span class="citation" data-cites="cox1979theoretical">(<a href="#ref-cox1979theoretical" role="doc-biblioref">Cox and Hinkley 1979</a>)</span>.</p>
-<p><span class="math display" id="eq:bayes">\[p\left(\frac{\theta}{x}\right)=p\left(x\mid\theta\right)p\left(\theta\right) 
+<p><span class="math display" id="eq:bayes">\[p\left(\theta\mid x\right)\propto p\left(x\mid\theta\right) 
   \tag{1} 
 \]</span></p>
 <p>In other words, the computation of the posterior requires three terms: a prior [<span class="math inline">\(p\left(\theta\right)\)</span>], a likelihood [<span class="math inline">\(p\left(x\mid\theta\right)\)</span>] and an observation [<span class="math inline">\(p\left(x\mid\theta\right)\)</span>]. The prior and likelihood can easily be computed as they are part of the assumed knowledge or model. The observation, which is a normalisation factor, requires complex integration that becomes intractable in high dimensions <a href="#eq:bayesintegral">(2)</a>.</p>

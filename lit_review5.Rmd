@@ -1,0 +1,28 @@
+---
+title: "Pathway Analysis"
+site: distill::distill_website
+bibliography: novia_ref.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+* What is pathway analysis? 
+
+* What is metabolic profiling?
+
+* Experimental methods in metabolomic
+
+* Metabolomic data analysis
+
+* How does it tie up with pathway analysis? 
+
+* Statistical method commonly used in pathway analysis
+  
+  - 
+
+
+
+) Pathway (or Metabolite Set) Enrichment Analysis; and 2) Pathway Topological Analysis. Pathway Enrichment Analysis (which is similar to MSEA) identifies which metabolic pathways have compounds (from the input lists) that are over-represented and have significant perturbations to their concentrations. MetPA uses a number of robust statistical measures to identify which pathways and which metabolites are over-represented. Pathway Topological Analysis measures the centrality of a metabolite in a metabolic network or a metabolic pathway. Central or highly important metabolites are “hubs”, located in the center of a metabolic pathway or process. MetPA employs a number of topological assessment tools to measure centrality or “hubness” in an objective manner (called Pathway Impact). Pathway impact is a combination of the centrality and pathway enrichment results. It is calculated adding up the importance measures of each of the matched metabolites and then dividing by the sum of the importance measures of all metabolites in each pathway.

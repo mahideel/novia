@@ -8,9 +8,9 @@ bibliography: novia_ref.bib
 knitr::opts_chunk$set(echo = FALSE)
 
 ```
-The most common statistical methods used to analyse metabolomics data are Principal component analysis (PCA) for unsupervised learning and Partial least squares-discriminant analysis (PLS-DA) or Orthogonal projections to laten structures-discriminant analysis (OPLS-DA) for supervised one [@gromski2015tutorial; @ren2015computational; @lee2018partial]. 
+The most common statistical methods used to analyse metabolomics data are Principal component analysis (PCA) for unsupervised learning and Partial least squares-discriminant analysis (PLS-DA) or Orthogonal projections to latent structures-discriminant analysis (OPLS-DA) for supervised one [@gromski2015tutorial; @ren2015computational; @lee2018partial]. 
 
-- put graph similar to Gromski et al (2015) Fig1 page 13.
+#- put graph similar to Gromski et al (2015) Fig1 page 13.
 
 In 2020 alone, there are 137 metabolomics studies that includes PLS-DA as a tool for the analysis of metabolomics data (from PubMed using keywords [metabolomic; PLS and PLS-DA]).
 
@@ -46,7 +46,7 @@ Limitations associated with PCA [@ren2015computational; @blasco2015comparative]:
 - PCA only works if the first few PCs can explain a large proportion of the variability. Otherwise, the visualisation results may be misleading. 
 
 
-Limitations associated with PLS-DA [@gromski2015tutorial; @ren2015computational; @lee2018partial; @]: 
+Limitations associated with PLS-DA [@gromski2015tutorial; @ren2015computational; @lee2018partial]: 
 
 - Does not handle missing values well.
 - Tend to overfit when the number of variables is significantly greater than the number of samples (p>>n issue). 
@@ -54,12 +54,12 @@ Limitations associated with PLS-DA [@gromski2015tutorial; @ren2015computational;
 - Can be misleading when the number of variables is significantly greater than the number of samples (p>>n issue). 
   - The problem is that because there are so many variables, there are some correlations that occurred just by chance [@brereton2014partial]. 
 - Does not incorporate pathway information. 
-    - Blasco et al (2015) did a comparative analysis of targeted metabolomics. They conducted H Nuclear Magnetic Resonance (NMR) analysis of cerebrospinal fluids (CSF) from patients with amyotrophic lateral sclerosis (ALS) and non-ALS patients. The aim of their study was to discriinate ALS patients and non-ALS subjects and to identify the variables relevant for this discrimination [@blasco2015comparative]. 
+    - Blasco et al (2015) did a comparative analysis of targeted metabolomics. They conducted H Nuclear Magnetic Resonance (NMR) analysis of cerebrospinal fluids (CSF) from patients with amyotrophic lateral sclerosis (ALS) and non-ALS patients. The aim of their study was to discriminate ALS patients and non-ALS subjects and to identify the variables relevant for this discrimination [@blasco2015comparative]. 
       - It was found that the most relevant metabolites to explain ALS are low concentration of acetate and high concentration of pyruvate. Alamine was not identified as relevant, however, it appears to be important when associated with high levels of pyruvate. 
       - Another metabolite, creatinine-creatinine were also not found to be relevant. However, this metabolite pair increases in importance when associated with low level of pyruvate. 
       - The above finding illustrates how important it is to take the interpretation of biochemical pathway into consideration as they provide the big picture of the dynamic of the overall metabolism. Some metabolites may not be directly associated with the outcome but they could serve as an 'indirect indicator' due to their strong association with the relevant metabolites. 
     
-- Can not incorporate individual level of information - every individual responses differently to COVID-19. Every individual has their own timeline associated with fighting this virus. This has significant bearings on the dynamic of metabolic perturbation that occurs in each individual. Echoing what has been said in numerous COVID-19 studies, each individual's immune system is unique, it relies on multiple metabolic pathways to initiate and regulate response to COVID-19 It is therefore vital to choose a statistical method that can incorporate these individual level's information including pathways information into account in model building. 
+- Can not incorporate individual level of information - every individual responses differently to COVID-19. Every individual has their own timeline associated with fighting this virus. This has significant bearings on the dynamic of metabolic perturbation that occurs in each individual. Echoing what has been said in numerous COVID-19 studies, each individual's immune system is unique, it relies on multiple metabolic pathways to initiate and regulate response to COVID-19. It is therefore vital to choose a statistical method that can incorporate these individual level's information including pathways information into account in model building. 
 
 
 

@@ -103,6 +103,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_meta_tags-->
   
+  <meta name="citation_reference" content="citation_title=Hierarchical bayesian models. Lectures on probability theory and mathematical statistics, third edition;citation_publication_date=2017;citation_author=Marco Taboga"/>
+  <meta name="citation_reference" content="citation_title=Revealing neuro-computational mechanisms of reinforcement learning and decision-making with the hBayesDM package;citation_publication_date=2016;citation_doi=10.1101/064287;citation_author=Woo-Young Ahn;citation_author=Nathaniel Haines;citation_author=Lei Zhang"/>
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
@@ -2100,14 +2102,65 @@ Literature Review
 
 
 <div class="d-article">
+<p>One approach that would allow the incorporation of individual information is Bayesian statistics.</p>
+<p>Bayesian statistics is based on probabilistic modeling, i.e. it uses probabilities as a tool to quantify uncertainty.</p>
+<p>Unique to Bayesian statistics, all observed and unobserved parameters in a statistical model are given a joint distribution which are called prior and data distributions <span class="citation" data-cites="van2021bayesian">(<a href="#ref-van2021bayesian" role="doc-biblioref">Schoot et al. 2021</a>)</span>. A typical Bayesian workflow have three main aspects:</p>
+<ol type="1">
+<li>capturing pre-existing knowledge about a given parameter in a statistical model via the formulation of <em>prior distribution</em>.</li>
+<li>determining the <em>likelihood function</em> of the parameters using the observed data.</li>
+<li>combining both the <em>prior distribution</em> and the <em>likelihood function</em> using Bayes’ theorem in the form of the <em>posterior distribution</em>.</li>
+</ol>
 <p>Bayesian workflow <span class="citation" data-cites="van2021bayesian">(<a href="#ref-van2021bayesian" role="doc-biblioref">Schoot et al. 2021</a>)</span></p>
 <div class="layout-chunk" data-layout="l-body">
-<p><img src="figure/Fig1_HTML.png" width="840" /></p>
+<p><img src="figure/bayes_workflow.png" width="840" /></p>
 </div>
+<p>Hierarchical Bayesian Model</p>
+<ul>
+<li><p>It is a multi-level Bayesian modeling which enables us to make scientific inferences about a population based on many individuals (or observations).</p></li>
+<li><p>It allows the incorporation of the pathway information as a ‘grouping’ mechanism in the model hierarchy.</p></li>
+<li><p>It allows the incorporation of each unique individual as a ‘grouping’ mechanism in the model hierarchy.</p>
+<ul>
+<li>In other words, we would be able to include clinical/metabolomics information down to an individual level such as different immune responses to COVID-19, which translates to different starting point, disease trajectory, recovery time etc, in the model.</li>
+</ul></li>
+</ul>
+<p>Hierarchical Bayesian - parameter flow <span class="citation" data-cites="taboga2017hierbayes">(<a href="#ref-taboga2017hierbayes" role="doc-biblioref">Taboga 2017</a>)</span></p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figure/hierbayes_param_workflow.png" width="70%" /></p>
+</div>
+<p>The original Bayes theorem:</p>
+<p><span class="math display" id="eq:bayes">\[p\left(\theta\mid x\right)\propto p\left(x\mid\theta\right) 
+  \tag{1} 
+\]</span></p>
+<p>The hierarchical Bayes theorem:</p>
+<p><span class="math display" id="eq:hierbayes">\[
+p\left(\alpha,\theta\mid x\right)\propto p\left(x\mid\theta,\alpha\right)p\left(\alpha\right)
+\tag{2}
+\]</span></p>
+<p>(<span class="math inline">\(\propto\)</span> = proportional to)</p>
+<p>Given the observed data <em>x</em>, in a hierarchical Bayesian model, the likelihood depends on two parameter vectors <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\alpha\)</span> <span class="math display">\[p\left(x\mid\theta,\alpha\right)\]</span></p>
+<p>and the prior</p>
+<p><span class="math display">\[
+p\left(\alpha,\theta\right)=p\left(\theta\mid\alpha\right)p\left(\alpha\right)
+\]</span></p>
+<p>is specified by separately specifying the conditional distribution <span class="math inline">\(p\left(\theta\mid\alpha\right)\)</span> and the distribution <span class="math inline">\(p\left(\alpha\right)\)</span></p>
+<p>In this special case, the parameter <span class="math inline">\(\alpha\)</span> is called hyper-parameter and the prior <span class="math inline">\(p\left(\alpha\right)\)</span> is called hyper-prior.</p>
+<p>A Schematic Illustration of Hierarchical Bayesian Modeling <span class="citation" data-cites="anh2016hBayesDM">(<a href="#ref-anh2016hBayesDM" role="doc-biblioref">Ahn, Haines, and Zhang 2016</a>)</span></p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="figure/hier_bayes_schem_illust.png" width="80%" /></p>
+</div>
+<p>Illustration with dummy data</p>
+<p>Dummy scenario:</p>
+<p>A metabolite concentration level was obtained from 260 individuals from various ethnic backgrounds. The sample collection was done in 10 different hospitals. These hospitals are scattered over different locations. Each hospital is considered as a representative of the surrounding suburbs where it is located. It is hypothesized that the metabolites concentration level is influenced by ethnicity and the environment factor (socio-economy status, diet, lifestyle etc). For illustration purpose, location is considered as a good indicator of the environment factor.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-anh2016hBayesDM" class="csl-entry" role="doc-biblioentry">
+Ahn, Woo-Young, Nathaniel Haines, and Lei Zhang. 2016. <span>“Revealing Neuro-Computational Mechanisms of Reinforcement Learning and Decision-Making with the hBayesDM Package.”</span> <em>bioRxiv</em>, December. <a href="https://doi.org/10.1101/064287">https://doi.org/10.1101/064287</a>.
+</div>
 <div id="ref-van2021bayesian" class="csl-entry" role="doc-biblioentry">
 Schoot, Rens van de, Sarah Depaoli, Ruth King, Bianca Kramer, Kaspar Märtens, Mahlet G Tadesse, Marina Vannucci, et al. 2021. <span>“Bayesian Statistics and Modelling.”</span> <em>Nature Reviews Methods Primers</em> 1 (1): 1–26.
+</div>
+<div id="ref-taboga2017hierbayes" class="csl-entry" role="doc-biblioentry">
+Taboga, Marco. 2017. <span>“Hierarchical Bayesian Models. Lectures on Probability Theory and Mathematical Statistics, Third Edition.”</span> <a href="https://www.statlect.com/fundamentals-of-statistics/Hierarchical-Bayesian-models.">https://www.statlect.com/fundamentals-of-statistics/Hierarchical-Bayesian-models.</a>
 </div>
 </div>
 <!--radix_placeholder_article_footer-->
@@ -2117,6 +2170,15 @@ Schoot, Rens van de, Sarah Depaoli, Ruth King, Bianca Kramer, Kaspar Märtens, M
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
