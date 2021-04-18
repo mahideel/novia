@@ -51,12 +51,12 @@ library(knitr)
 include_graphics("/Users/novia/Documents/novia/figure/metabolomics_workflow.png")
 ```
 
-<font size="2"> The quantification of a group of metabolites, within or associated with a particular metabolic pathway.
+<font size="2"> The quantification of a group of metabolites, within or associated with a particular metabolic pathway. </font>
 
 
 ## Metabolic Pathways 
 
-```{r out.width = "80%"}
+```{r out.width = "100%"}
 library(knitr)
 include_graphics("/Users/novia/Documents/novia/figure/metabolism_pathways.png")
 ```

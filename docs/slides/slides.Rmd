@@ -1,5 +1,5 @@
 ---
-title: "Bayesian Statistics, Metabolomics & Covid-19"
+title: "Pathway Analysis in Metabolomics using Bayesian Statistics"
 author: "Novia Minaee"
 date: "15/04/2021"
 output:
@@ -43,208 +43,21 @@ div.footnotes {
 </script>
 
 
-## COVID-19 pandemic <font size="5">
 
-According to World Health Organization <footnote content="As per 7th April 2021"></footnote>: 
+## Metabolic Profiling
 
-- Caused by severe acute respiratory syndrome coronavirus 2 (SARS-Cov-2)
-- Has spread to 223 countries
-- Infected > 133.5 million people
-- Killed > 2.8 million people
-
-</font>
-
-
-## COVID-19 symptoms <font size="5">
-
-- Every individual responses differently to the virus
-- Most individuals experience mild sore throat, fever and fatigue
-- A subset of individuals experience severe respiratory distress, organ failure and cytokine storm that results in death [@ayres2020metabolic; @kimhofer2020integrative]
-
-</font>
-
-
-## COVID-19 and metabolic pathway <font size="4">
-
-* Several common metabolic pathways were found to be significantly perturbed in COVID-19 patients [@pang2021comprehensive]: 
-
-  - Porphyrin 
-  - Cellular amino acidarachidonic acid
-
-
-* Others were found to be associated with the progression and severity of COVID-19 [@pang2021comprehensive; @polonikov2020endogenous; @li2020insight]: 
-
-  - Propanate
-  - TCA
-  - Selenocompound
-  - Mannose
-  - Glutathione 
-
-</font>
-
-## Statistical methods in metabolomics <font size="5">
-
-The most common statistical methods used to analyse metabolomics data are [@gromski2015tutorial; @ren2015computational; @lee2018partial]: 
-
-- Principal component analysis (PCA) - unsupervised 
-- Partial least squares-discriminant analysis (PLS-DA) - supervised 
-- Orthogonal projections to latent structures-discriminant analysis (OPLS-DA) - supervised  
-
-</font>
-
-
-## Limitations to PCA <font size="5">
-
-PCA [@ren2015computational; @blasco2015comparative] : 
-
-- Prone to outliers
-- The groups that are shown in the PCA scores plot are not necessarily the biologically meaningful groups. 
-- PCA only works if the first few PCs can explain a large proportion of the variability. Otherwise, the visualisation results may be misleading. 
-
-</font>
-
-## Limitations to PLS-DA <font size="4">
-
-PLS-DA [@gromski2015tutorial; @ren2015computational; @lee2018partial; @brereton2014partial; @blasco2015comparative]
-
-- Does not handle missing values well
-- Issues with fitting when p >> n
-- Does not incorporate pathway information 
-- Can not incorporate individual level of information
-  - Every individual responses differently to COVID-19
-  - Each immune system relies on multiple metabolic pathways to initiate and regulate response to COVID-19
-  - It is extremely important to take these individual level's information and pathways information into account when conducting a statistical analysis. 
-
-</font> 
- 
-## Bayesian Statistics <font size="4">
-
-* One approach that would allow the incorporation of individual information is Bayesian statistics. 
-
-* Bayesian statistics began when **Bayes theorem** was first postulated by The Rev Thomas Bayes in 1763 [@bayes1763lii].  
-
-\[p\left(\theta\mid x\right)\propto p\left(x\mid\theta\right) 
-\]
-
-* In other words, the computation of the posterior requires three terms: 
-
-  - a prior: $p\left(\theta\right)$ 
-  - a likelihood: $p\left(x\mid\theta\right)$ 
-  - an observation: $p\left(x\mid\theta\right)$
-
-</font>
-
-
-## Bayesian workflow <font size=5">
-
-A typical Bayesian workflow have three main aspects: 
-
-1. capturing pre-existing knowledge about a given parameter in a statistical model via the formulation of **prior distribution**.
-2. determining the **likelihood function** of the parameters using the observed data
-3. combining both the **prior distribution** and the **likelihood function** using Bayes theorem in the form of the **posterior distribution**. 
-
- </font>
-
-
-## Bayesian workflow [@van2021bayesian]
-
-```{r out.width = "65%"}
+```{r out.width = "75%"}
 library(knitr)
-include_graphics("/Users/novia/Documents/novia/figure/bayes_workflow.png")
+include_graphics("/Users/novia/Documents/novia/figure/metabolomics_workflow.png")
 ```
 
-
-## Hierarchical Bayesian Model (HBM) <font size="4">
-
-- It is a multi-level Bayesian modeling which enables us to make scientific inferences about a population based on many individuals (or observations).
-
-- It allows the incorporation of pathway information as a 'grouping' mechanism in the model hierarchy. 
-
-- It allows the incorporation of each unique individual as a 'grouping' mechanism in the model hierarchy. 
-
-</font>
+<font size="2"> The quantification of a group of metabolites, within or associated with a particular metabolic pathway. </font>
 
 
-## Parameter estimation <font size="3">
-
-We start with our regular Bayesian parameter estimation:
-
-\[
-P\left(\varTheta_{i}\mid X_{i}\right)=\frac{P\left(X_{i}\mid\varTheta_{i}\right)}{P\left(X_{i}\right)}=\frac{P\left(X_{i}\mid\varTheta_{i}\right)P\left(\varTheta_{i}\right)}{\int P\left(X_{i}\mid\varTheta_{i'}\right)P\left(\varTheta_{i'}\right)d\varTheta_{i}'}
-\]
-
-  - $X_{i}$ = the observation
-  - $\varTheta_{i}$ = a set of parameters of a model for individual *i* 
-  - $P(X_{i})$ = the likelihood of data being generated by this model
-  - $P(\varTheta_{i})$ and $P(\varTheta_{i}\mid X_{i})$ = the prior and posterior distributions of $\varTheta_{i}$, respectively.
-
-
-In HBM, hyper-parameters are introduced on top of individual parameters. If we set hyper-parameters as 
-$\varPhi=\left\{ \mu_{\alpha},\mu_{\beta},\mu_{\gamma},\sigma_{\alpha},\sigma_{\beta},\sigma_{\gamma},\ldots\right\}$ with group-level normal means $\mu_{\left(\cdot\right)}$ and standard deviation $\sigma_{\left(\cdot\right)}$, the joint posterior distribution $P\left(\Theta,\Phi\mid X\right)$ is:
-
-\[
-P\left(\Theta,\Phi\mid X\right)=\frac{P\left(X\mid\Theta,\Phi\right)P\left(\Theta,\Phi\right)}{P\left(X\right)}\varpropto P\left(X\mid\Theta\right)P\left(\Theta\mid\Phi\right)P\left(\varPhi\right)
-\]
-
-</font>
-
-## Shrinkage <font size="4">
-
-The hierarchical structure of HBM leads to "shrinkage" effects [@anh2016hBayesDM] in individual estimates. 
-
-In simple terms, when each individual's estimates inform the group's estimates, this action in turn inform the estimates of all individuals because the group's estimates 'control' the individuals' estimates. 
-
-Consequently individual parameter estimates tend to be better because commonalities among individuals are captured and informed by group estimates. 
-
-
-```{r out.width = "65%", fig.align='center'}
-library(knitr)
-include_graphics("/Users/novia/Documents/novia/figure/shrinkage.png")
-```
-
-</font>
-
-
-## Applying Bayes 
-
-<font size="4"> One of the pathway identified in metabolic pertubation due to COVID-19 is Tricarboxylic Acid (TCA). 
-
-There are many metabolites in this pathway that can alter the response of both the innate and adaptive immune systems, for example: 
-
-- acetyl-CoA
-- itaconate
-- succinate
-- fumarate
-- L-2-HG 
-
-</font>
-
-
-## TCA pathway
-
-```{r out.width = "65%", fig.align='center'}
-library(knitr)
-include_graphics("/Users/novia/Documents/novia/figure/TCA-krebs-cycle.png")
-```
-
-
-## Incorporating TCA into COVID-19 model
-
-<font size="4"> Below is a simple graph to illustrate a single pathway as a grouping variable sits atop the individual metabolites within that pathway. </font>
+## Metabolic Pathways 
 
 ```{r out.width = "100%"}
 library(knitr)
-include_graphics("/Users/novia/Documents/novia/figure/tca_hier.png")
+include_graphics("/Users/novia/Documents/novia/figure/metabolism_pathways.png")
 ```
-
-
-
-##
-<div class="centered"><font size="20">
-**Thank you for your attention**
-</div></font>
-
-
-## References
-<font size="1">
 
