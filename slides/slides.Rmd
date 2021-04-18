@@ -46,14 +46,18 @@ div.footnotes {
 
 ## Metabolic Profiling
 
-<div class="notes">
-This is my *note*.
-
-Def: Quantitative study of a group of metabolites, known or unknown, within or associated with a particular metabolic pathway
-
-</div>
-
-```{r out.width = "90%%"}
+```{r out.width = "75%"}
 library(knitr)
 include_graphics("/Users/novia/Documents/novia/figure/metabolomics_workflow.png")
 ```
+
+<font size="2"> The quantification of a group of metabolites, within or associated with a particular metabolic pathway.
+
+
+## Metabolic Pathways 
+
+```{r out.width = "80%"}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/metabolism_pathways.png")
+```
+
