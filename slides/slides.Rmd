@@ -51,7 +51,12 @@ library(knitr)
 include_graphics("/Users/novia/Documents/novia/figure/metabolomics_workflow.png")
 ```
 
+<div class="notes">
+This is my *note*.
+
 <font size="2"> The quantification of a group of metabolites, within or associated with a particular metabolic pathway. </font>
+
+</div>
 
 
 ## Metabolic Pathways 
@@ -60,4 +65,18 @@ include_graphics("/Users/novia/Documents/novia/figure/metabolomics_workflow.png"
 library(knitr)
 include_graphics("/Users/novia/Documents/novia/figure/metabolism_pathways.png")
 ```
+
+
+## Metabolic Pathways - contd. 
+```{r out.width = "90%"}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/Metabolism_790px.png")
+```
+
+<div class="notes">
+This is my *note*.
+
+<font size="2"> as you can see, metabolites travel through different pathways and/or metabolism cycles </font>
+
+</div>
 
