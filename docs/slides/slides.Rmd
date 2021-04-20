@@ -126,16 +126,16 @@ Two most common methods of enrichment analysis are:
 - Based on statistical tests on probability distribution like the hypergeometric, binomial or chi-squared. 
 
 
-<font size="2"> [@kamburov2011integrated; @ren2015computational; @khatri2012ten; @picart2018fella; @xia2010msea; @maertens2017metabolomic] </font>
+<font size="3"> [@kamburov2011integrated; @ren2015computational; @khatri2012ten; @picart2018fella; @xia2010msea; @maertens2017metabolomic] </font>
 
 
 ## Quantitative Enrichment Analysis (QEA)
 
-  - It is directly based on the compound concentration values as compared to the compound lists used by over representation analysis. 
-  - It is usually more sensitive than over-representation analysis and has the potential to discover "subtle but consistent" changes among compounds within the same biological pathway.
-  - The QEA algorithm uses a generalized linear model to estimate the correlation between compound concentration profiles, X, and phenotype labels, Y. 
+  - It is directly based on the compound concentration values. 
+  - It has the potential to discover "subtle but consistent" changes among compounds within the same biological pathway.
+  - Uses a generalized linear model to estimate the correlation between compound concentration profiles and phenotype. 
 
-<font size="2"> [@ren2015computational; @xia2010msea; @maertens2017metabolomic] </font>
+<font size="3"> [@ren2015computational; @xia2010msea; @maertens2017metabolomic] </font>
 
 
 ## Graph representation of ORA and QEA 
@@ -146,7 +146,7 @@ include_graphics("/Users/novia/Documents/novia/figure/ora_qea_flowchart.png")
 ```
 
 
-## Example - ORA & QEA Data background 
+## Example - ORA and QEA Data background 
 
 <font size="3">
 
@@ -183,7 +183,7 @@ include_graphics("/Users/novia/Documents/novia/figure/ORA/ora_0_dpi72.png")
 include_graphics("/Users/novia/Documents/novia/figure/QEA/qea_0_dpi72.png")
 ```
 
-<font size="2">
+<font size="4">
 
 * P-value indicates the probability of seeing at least a particular number of metabolites from a certain metabolite set in a given compound list. 
 
@@ -201,7 +201,7 @@ include_graphics("/Users/novia/Documents/novia/figure/QEA/qea_0_dpi72.png")
     - each metabolite and pathway is assumed to be independent of others 
   
     
-<font size="2"> [@kamburov2011integrated; @ren2015computational; @khatri2012ten; @picart2018fella; @xia2010msea] </font>
+<font size="3"> [@kamburov2011integrated; @ren2015computational; @khatri2012ten; @picart2018fella; @xia2010msea] </font>
 
 
 <div class="notes">
@@ -212,7 +212,7 @@ include_graphics("/Users/novia/Documents/novia/figure/QEA/qea_0_dpi72.png")
 
 
 ## Bayesian Statistics 
-<font size="4">
+<font size="5">
 
 * It is a probabilistic model that uses Bayes' Theorem to update the probability for a hypothesis as more evidence becomes available. 
 
@@ -220,13 +220,13 @@ include_graphics("/Users/novia/Documents/novia/figure/QEA/qea_0_dpi72.png")
 
 </font>
 
-```{r out.width = "75%", fig.align='center'}
+```{r out.width = "80%", fig.align='center'}
 library(knitr)
 include_graphics("/Users/novia/Documents/novia/figure/bayes_theorem.png")
 ```
 
 ## Example
-<font size="4">
+<font size="5">
 
 We want to know what is the probability that it rained given that it is wet outside? 
 
@@ -252,11 +252,10 @@ This is to ensure that the posterior is the correct probability distribution.
 library(knitr)
 include_graphics("/Users/novia/Documents/novia/figure/bayes_workflow.png")
 ```
-<font size="4">[@van2021bayesian]</font>
+<font size="2">[@van2021bayesian]</font>
 
 
 ## Strength of Bayesian 
-<font size="4">
 
 - Useful for modelling networks of biological reactions 
 
@@ -292,7 +291,7 @@ Thus, the model fitting procedure described here lends itself to iterative exper
 
 
 
-## References <font size="2">
+## References <font size="3">
 
 
 
