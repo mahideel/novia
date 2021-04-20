@@ -46,37 +46,254 @@ div.footnotes {
 
 ## Metabolic Profiling
 
-```{r out.width = "75%"}
+```{r out.width = "90%", fig.align='center'}
 library(knitr)
-include_graphics("/Users/novia/Documents/novia/figure/metabolomics_workflow.png")
+include_graphics("/Users/novia/Documents/novia/figure/metabolic_profiling.png")
 ```
 
 <div class="notes">
-This is my *note*.
+Definition:
+The quantification of a group of metabolites, within or associated with a particular metabolic pathway. </font>
 
-<font size="2"> The quantification of a group of metabolites, within or associated with a particular metabolic pathway. </font>
-
+Perhaps some people would also ask, why metabolomics? Since metabolome is so closely tied up to genotype of an organism, its physiology and environment, metabolome is highy dynamic in nature and responds rapidly to changes in the environment. So they can provide much better opportunity to understand the mechanism of human diseases. 
 </div>
 
 
-## Metabolic Pathways 
-
-```{r out.width = "100%"}
-library(knitr)
-include_graphics("/Users/novia/Documents/novia/figure/metabolism_pathways.png")
-```
-
-
-## Metabolic Pathways - contd. 
-```{r out.width = "90%"}
+## Metabolic journey 
+```{r out.width = "90%", fig.align='center'}
 library(knitr)
 include_graphics("/Users/novia/Documents/novia/figure/Metabolism_790px.png")
 ```
+<font size="1"> (https://en.wikipedia.org/wiki/Wikipedia_talk:WikiProject_Molecular_Biology/Metabolic_Pathways/Archive_1#/media/File:Metabolism_wip.png) </font>
+
+
 
 <div class="notes">
-This is my *note*.
 
-<font size="2"> as you can see, metabolites travel through different pathways and/or metabolism cycles </font>
+As you can see, metabolites travel through different pathways and/or metabolism cycles
 
 </div>
+
+
+## Citric Acid Cycle or Tricarboxylic acid (TCA) cycle
+```{r out.width = "75%", fig.align ='center'}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/TCA_cycle.png")
+```
+<font size="1"> (https://www.sigmaaldrich.com/technical-documents/articles/biofiles/citric-acid-cycle.html) </font>
+
+<div class="notes">
+
+- Now we are zooming in into the citric acid cycle (TCA) pathway.
+- The citric acid cycle is the final common pathway for the oxidation of fuel molecules—amino acids, fatty acids, and carbohydrates. 
+
+</div>
+
+
+## Challenge
+
+- So many unknown links between pathways that haven't been identified.
+
+- To take into account the interaction between pathways and metabolites within the pathway as one dynamic system.
+
+- To include the pathway interaction into metabolic profiling in the pathway analysis. 
+
+
+<div class="notes">
+
+- The current gap in pathway analysis is the lack of a method that can capture and model the dynamic of biological nature. 
+- Existing methods of pathway analysis assume that pathways are independent of each other - which is biologically untrue. 
+
+</div>
+
+## Aim 
+
+- To integrate the dynamic nature of a biological system in the analysis through Bayesian Statistics. 
+
+
+## Pathway Analysis Methods
+
+Two most common methods of enrichment analysis are: 
+
+1. Over-representation analysis (ORA) 
+
+2. Quantitative Enrichment Analysis (QEA)
+
+
+## Over-representation analysis (ORA) 
+
+- To evaluate whether a particular set of metabolites is represented more than expected by chance within a given compound list.
+- Based on statistical tests on probability distribution like the hypergeometric, binomial or chi-squared. 
+
+
+<font size="2"> [@kamburov2011integrated; @ren2015computational; @khatri2012ten; @picart2018fella; @xia2010msea; @maertens2017metabolomic] </font>
+
+
+## Quantitative Enrichment Analysis (QEA)
+
+  - It is directly based on the compound concentration values as compared to the compound lists used by over representation analysis. 
+  - It is usually more sensitive than over-representation analysis and has the potential to discover "subtle but consistent" changes among compounds within the same biological pathway.
+  - The QEA algorithm uses a generalized linear model to estimate the correlation between compound concentration profiles, X, and phenotype labels, Y. 
+
+<font size="2"> [@ren2015computational; @xia2010msea; @maertens2017metabolomic] </font>
+
+
+## Graph representation of ORA and QEA 
+
+```{r out.width = "90%", fig.align='top'}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/ora_qea_flowchart.png")
+```
+
+
+## Example - ORA & QEA Data background 
+
+<font size="3">
+
+* Urinary metabolite concentrations from 77 cancer patients. 
+* Phenotype: Cachexic; Healthy 
+
+* Compound list (first 15 alphabetical order)
+
+  - Acetoacetic acid
+  - Beta-Alanine
+  - Creatine
+  - Dimethylglycine
+  - Fumaric acid
+  - Glycine
+  - Homocysteine
+  - L-Cysteine
+  - L-Isolucine
+  - L-Phenylalanine
+  - L-Serine
+  - L-Threonine
+  - L-Tyrosine
+  - L-Valine
+  - Phenylpyruvic acid
+  
+</font>
+
+
+
+## Example of ORA and QEA result 
+
+``` {r, figures-side, fig.show="hold", out.width="50%"}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/ORA/ora_0_dpi72.png")
+include_graphics("/Users/novia/Documents/novia/figure/QEA/qea_0_dpi72.png")
+```
+
+<font size="2">
+
+* P-value indicates the probability of seeing at least a particular number of metabolites from a certain metabolite set in a given compound list. 
+
+* P-values have been adjusted for multiple testing. 
+
+</font>
+
+
+
+## Current Limitations of ORA and QEA
+
+  - Substantial loss of information
+    - With ORA, only metabolites showing significant difference between two study groups are used and the rest are ignored. 
+  - Improper independence assumption
+    - each metabolite and pathway is assumed to be independent of others 
+  
+    
+<font size="2"> [@kamburov2011integrated; @ren2015computational; @khatri2012ten; @picart2018fella; @xia2010msea] </font>
+
+
+<div class="notes">
+
+- We aim to narrow the gap by proposing a pathway analysis method using Bayesian Statistics that can capture this dynamic and hierarchical nature of biological system. 
+
+</div>
+
+
+## Bayesian Statistics 
+<font size="4">
+
+* It is a probabilistic model that uses Bayes' Theorem to update the probability for a hypothesis as more evidence becomes available. 
+
+  - i.e. it uses probabilities as a tool to quantify uncertainty. 
+
+</font>
+
+```{r out.width = "75%", fig.align='center'}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/bayes_theorem.png")
+```
+
+## Example
+<font size="4">
+
+We want to know what is the probability that it rained given that it is wet outside? 
+
+A = it rained today, B = wet sidewalk. 
+
+```{r out.width = "80%", fig.align='center'}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/rain_wet.png")
+```
+
+p(rain) – our initial beliefs – called prior.
+
+p(rain|wet) – our final beliefs – called posterior. 
+
+p(wet) – how plausible is the evidence? what is the likelihood that it is wet outside given it rained and not rained. 
+This is to ensure that the posterior is the correct probability distribution. 
+
+</font>
+
+## Bayesian workflow
+
+```{r out.width = "65%", fig.align='center'}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/bayes_workflow.png")
+```
+<font size="4">[@van2021bayesian]</font>
+
+
+## Strength of Bayesian 
+<font size="4">
+
+- Useful for modelling networks of biological reactions 
+
+  - number of parameters >> number of samples 
+
+<div class="notes">
+
+Why? 
+- Networks of biological reactions usually are modelled by large number of parameters but we don't always have sample size or number of observation to match the number of parameters. 
+
+- If we were to use frequentist methods, we'd require at least as many observations as there are parameters to fit a model 
+
+- Bayesian methods incorporate our prior knowledge of the system and use the experimental data to refine the estimates.  
+Thus, the model fitting procedure described here lends itself to iterative experimentation where the experimental results, even if they consist of a single datum, can be used to update the prior for the next experiment.  
+
+</div>
+
+- Can accommodate structure of the data into the model 
+
+  - It allows us to group the metabolites according to the pathways they sit under. 
+  
+- It takes account uncertainty 
+
+- Information sharing amongst groups.
+
+<div class="notes">
+
+  - when the number of observations for groups varies widely, the groups with smaller numbers of observations will have improved inference about their group parameters by borrowing information via the hierarchical model about the group specific parameters.
+
+</div>
+
+</font>
+
+
+
+## References <font size="2">
+
+
+
 
