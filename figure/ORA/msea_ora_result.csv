@@ -1,0 +1,29 @@
+"","total","expected","hits","Raw p","Holm p","FDR"
+"Glycine, serine and threonine metabolism",33,0.369,8,4.21e-10,3.54e-08,3.54e-08
+"Aminoacyl-tRNA biosynthesis",48,0.536,7,3.04e-07,2.53e-05,1.28e-05
+"Phenylalanine, tyrosine and tryptophan biosynthesis",4,0.0447,3,4.61e-06,0.000378,0.000129
+"Phenylalanine metabolism",10,0.112,3,0.000133,0.0107,0.00278
+"Cysteine and methionine metabolism",33,0.369,4,0.000358,0.0286,0.00601
+"Tyrosine metabolism",42,0.469,4,0.00092,0.0727,0.0121
+"Pantothenate and CoA biosynthesis",19,0.212,3,0.00101,0.0784,0.0121
+"Valine, leucine and isoleucine biosynthesis",8,0.0894,2,0.00316,0.243,0.0332
+"Glyoxylate and dicarboxylate metabolism",32,0.357,3,0.0047,0.357,0.0439
+"Citrate cycle (TCA cycle)",20,0.223,2,0.0198,1,0.167
+"Pyruvate metabolism",22,0.246,2,0.0238,1,0.181
+"Propanoate metabolism",23,0.257,2,0.0259,1,0.181
+"Alanine, aspartate and glutamate metabolism",28,0.313,2,0.0374,1,0.225
+"Glutathione metabolism",28,0.313,2,0.0374,1,0.225
+"Synthesis and degradation of ketone bodies",5,0.0558,1,0.0547,1,0.306
+"Arginine and proline metabolism",38,0.424,2,0.0652,1,0.342
+"Valine, leucine and isoleucine degradation",40,0.447,2,0.0714,1,0.353
+"Thiamine metabolism",7,0.0782,1,0.0758,1,0.354
+"Taurine and hypotaurine metabolism",8,0.0894,1,0.0861,1,0.381
+"Ubiquinone and other terpenoid-quinone biosynthesis",9,0.101,1,0.0964,1,0.405
+"Arginine biosynthesis",14,0.156,1,0.146,1,0.584
+"Butanoate metabolism",15,0.168,1,0.156,1,0.595
+"beta-Alanine metabolism",21,0.235,1,0.211,1,0.74
+"Sphingolipid metabolism",21,0.235,1,0.211,1,0.74
+"Glycolysis / Gluconeogenesis",26,0.29,1,0.255,1,0.857
+"Porphyrin and chlorophyll metabolism",30,0.335,1,0.288,1,0.932
+"Pyrimidine metabolism",39,0.436,1,0.358,1,1
+"Primary bile acid biosynthesis",46,0.514,1,0.408,1,1

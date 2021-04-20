@@ -23,6 +23,56 @@ knitr::opts_chunk$set(echo = FALSE)
   
   - 
 
+## Pathway Analysis 
+
+```{r out.width = "100%", fig.align='center'}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/pathway_analysis_khatri.png")
+```
+<font size=3">Fig 4. Pathway analysis workflow [@khatri2012ten]
 
 
-) Pathway (or Metabolite Set) Enrichment Analysis; and 2) Pathway Topological Analysis. Pathway Enrichment Analysis (which is similar to MSEA) identifies which metabolic pathways have compounds (from the input lists) that are over-represented and have significant perturbations to their concentrations. MetPA uses a number of robust statistical measures to identify which pathways and which metabolites are over-represented. Pathway Topological Analysis measures the centrality of a metabolite in a metabolic network or a metabolic pathway. Central or highly important metabolites are “hubs”, located in the center of a metabolic pathway or process. MetPA employs a number of topological assessment tools to measure centrality or “hubness” in an objective manner (called Pathway Impact). Pathway impact is a combination of the centrality and pathway enrichment results. It is calculated adding up the importance measures of each of the matched metabolites and then dividing by the sum of the importance measures of all metabolites in each pathway.
+## Enrichment analysis 
+
+  - Takes differential data from every measured metabolite and looks for pathways displaying significantly co-ordinated shifts in those value [@kamburov2011integrated]. 
+
+
+## Example of QEA result for top 25 Pathway
+
+```{r out.width = "70%", fig.align='top'}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/QEA/qea_0_dpi72.png")
+```
+
+- P-value indicates the probability of seeing at least a particular number of metabolites from a certain metabolite set in a given compound list. 
+- P-values have been adjusted for multiple testing. 
+
+
+```{r out.width = "60%", fig.align='top'}
+library(knitr)
+include_graphics("/Users/novia/Documents/novia/figure/ORA/ora_0_dpi72.png")
+```
+
+
+## Pathway topology-based (PT) methods 
+
+- Incorporates topological measures of the metabolites in the statistic to account for their inequivalence in the metabolic network. 
+
+Limitations: 
+
+- The smaller size of biochemical pathways, their high degrees of overlap, as well as their incomplete coverage by many mass spectrometry acquired data sets make it rather challenging. 
+
+<font size=2"> [@picart2018fella; @ma2019comparative] </font>
+
+Pathway (or Metabolite Set) Enrichment Analysis; and 2) Pathway Topological Analysis. Pathway Enrichment Analysis (which is similar to MSEA) identifies which metabolic pathways have compounds (from the input lists) that are over-represented and have significant perturbations to their concentrations. MetPA uses a number of robust statistical measures to identify which pathways and which metabolites are over-represented. Pathway Topological Analysis measures the centrality of a metabolite in a metabolic network or a metabolic pathway. Central or highly important metabolites are “hubs”, located in the center of a metabolic pathway or process. MetPA employs a number of topological assessment tools to measure centrality or “hubness” in an objective manner (called Pathway Impact). Pathway impact is a combination of the centrality and pathway enrichment results. It is calculated adding up the importance measures of each of the matched metabolites and then dividing by the sum of the importance measures of all metabolites in each pathway.
+
+
+## Bayesian example - Toy Data 
+
+Background:
+
+A metabolite concentration level was obtained from 260 individuals from 7 ethnic backgrounds. The sample collection was done in 10 different hospitals. These hospitals are scattered over different locations. Each hospital acts as a representative of the surrounding suburbs where it is located. It is hypothesized that the metabolites concentration level is influenced by ethnicity and the environment factor (socio-economy status, diet, lifestyle etc). For illustration purpose, location is considered as a good indicator of the environment factor. 
+
+\[
+y_{i}=\alpha_{ji}+\beta_{xi}+\varepsilon_{i}
+\]
